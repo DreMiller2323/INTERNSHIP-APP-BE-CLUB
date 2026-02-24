@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "app/components/sign-in-creds.tsx", "app/login/page.jsx", "app/api/auth/login/router.tsx", "lib/auth.jsx", "app/dashboard/page.jsx", "proxy.js", "app/api/fitness/route.js", "app/dashboard/layout.tsx"  ],
   "exclude": ["node_modules"]
 }
