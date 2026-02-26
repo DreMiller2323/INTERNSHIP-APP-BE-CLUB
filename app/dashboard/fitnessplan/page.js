@@ -1,5 +1,5 @@
 
-//imported client component fitness page so we can use a servr component and secure the route all data from fitness will be rendered here. 
+//imported client component fitness page so we can use a server component and secure the route all data from fitness will be rendered here. 
 import Plan from '../fitness/page'
 import {auth} from '../../../lib/auth';
 import {Suspense} from 'react'
