@@ -1,4 +1,5 @@
 import { signIn } from '../../lib/auth';
+import { redirect, RedirectType } from 'next/navigation'
 
 export default async function SignInForm() {
   // Server Action for the form
@@ -10,17 +11,19 @@ try{
     const result = await signIn('credentials', {
       email,
       password,
-      redirect: false, // we handle redirect manually
+      redirect: true // we handle redirect manually
     });
 
     if (result?.ok) {
-      alert('Welcome to my site')
+
     } else {
       console.log('error')
     }
   }catch(error){
     console.log(error)
   }
+      redirect('/dashboard')
+
   }
 
   return (

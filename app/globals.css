@@ -1,26 +1,89 @@
 @import "tailwindcss";
-
-.topnav {
-  background-color: black;
-  overflow: hidden;
-  border: 0.5px solid rgb(83, 4, 83);;
-  border-radius: 0.5px;
-
+/* Image details */
+[class*='col-'] {
+   float: left;
+   font-family: Roboto;
+   
+}
+.col-1-3  {
+    width: 33.33%;    
+    justify-self: start;    
+    border-style: 0.5px solid rgb(94, 94, 236);;
+}
+.col-2-3 {
+  position:grid;
+    width: 99.99%;
+justify-self: center;    
 }
 
-/* Style the links inside the navigation bar */
+.centered {
+  color:rgb(94, 94, 236);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    font-size: 40px
+
+}
+.image-container {
+  position: relative;
+  width: fit-content;
+}
+
+.image-container img {
+  display: block;
+}
+
+/* Position helpers */
+Img{
+  
+  border-radius: 70px;
+border: 0.5px solid rgb(94, 94, 236);
+  padding: 50px;
+  font-size: 40px;
+}
+
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 40px;
+  color:rgb(94, 94, 236);
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+    color:rgb(94, 94, 236);
+}
+
+/* 
+end of image css */
+
+/*  navigation bar */
+/* navbar */
+.topnav {
+background-color:rgb(94, 94, 236);;
+overflow: hidden;
+border: 0.5px solid ;
+width: 100%; 
+float: left;
+padding: 20px;
+}
 .topnav a {
-  float: left;
-  color: #f2f2f2;
+   color: white;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none;
+  text-decoration:wavy;
   font-size: 17px;
+  border-color: purple
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: white;
+
   color: black;
 }
 
@@ -30,34 +93,31 @@
   color: white;
 }
 body{
+  font-family: Arial, Helvetica, sans-serif;
   background-color:black;
-  color:white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  
+  color: whitesmoke;
+/* Form css */
 }
 input {
-  width: 50%;
-  background-color:gray;
-  color:white;
+  width: 40%;
+  background-color:whitesmoke;;
   padding: 5px;
   margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+
 }
 
 input:hover {
   background-color:gray;
 }
 button{
-    border: 2px solid gray;
-    border-radius:10px;
-  background-color: black;
-  padding: 15px;
-  color: white;
- cursor: pointer;
- border-color: black;
-
+border-radius: 15px;
+background-color:  rgb(94, 94, 236);
+color: black;
+padding: 20px;
+cursor:pointer;
 }
 form {
 
@@ -67,22 +127,22 @@ background-color: black;
   margin-left: 350px;
   margin-right: 40px;
 color: whitesmoke;
- border: 0.5px solid gray; 
+ border: 0.5px solid rgb(94, 94, 236);
   border-radius: 10px;
+  color: black;
 
 
 }
 label {display: block;}
 
 .formDiv{
- border: 0.5px solid gray; 
+ border: 0.5px solid rgb(94, 94, 236);; 
  border-radius: 5px;
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
-  background-color: rgb(83, 4, 83);
   padding: 5px;
   gap: 5px;
 }
@@ -93,8 +153,51 @@ label {display: block;}
   font-size: 30px;
   text-align: center;
 }
+/* footer css */
+
+/* plan css */
+.plan{
+background-color: black;
+ border-radius: 15px;
+text-align: center;
+color:white;
+border: 2px solid blue;
+margin-top: auto;
+width: 33.33%;
+padding: 25px;
+}
+.grid {
+   width: auto;
+}
+/* web content */
+grid:after {
+   content: "";
+   display: table;
+   clear: both;
+}
+[class*='col-'] {
+   padding-right: 20px;
+}
+[class*='col-']:last-of-type {
+   padding-right: 0;
+}
+*, *:after, *:before {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+[class*='col-'] {
+   float: left;
+}
+/* footer */
 .footer{
-  background-color: black;
-   border: 0.5px solid rgb(83, 4, 83);; 
-   padding:20px;
+  background-color: white;
+   border: 0.5px solid rgb(83, 4, 83);
+   height: 10%;
+  background-color:rgb(94, 94, 236);
+}
+.frontend-content{
+    color:rgb(94, 94, 236);
+    font-size: 60px;
+
 }

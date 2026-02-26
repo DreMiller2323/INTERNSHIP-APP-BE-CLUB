@@ -1,5 +1,3 @@
-'use client'
- //decided to use swr as this page is at an outer leaflet of the nextjs app therefore we dont want to use a server component 
  //and expose our data out here.
 import useSWR from 'swr'
 
@@ -9,19 +7,19 @@ const fetcher = (url) => fetch(url).then((r) => r.json())
 export default   function Plan() {
 
   const { data, error, isLoading } = useSWR(
-    '/api/fitness',
+    '/api/fitnessAnalytics',
     fetcher
   )
 
   if (isLoading) return <div>Loading...</div>
   if (error) return <div>Error: {error.message}</div>
   if(!data) return <div>Please see Fitness Intake age</div>
+  console.log(data)
   return (
 
-   
   <div className='plan'>
-  
-{data.map((plan) => (
+  <h1>Page is working </h1>
+{/* {data.map((plan) => (
   
   <div key={plan.id}>Week1: {` ${plan.week_one} IBS`}</div>
 ))}
@@ -33,24 +31,7 @@ export default   function Plan() {
     {data.map((plan) => (
         <div key={plan.id}> Week 3: {` ${plan.week_three} IBS`}</div>
  ))}
+</div> */}
 </div>
-<div>
-    {data.map((plan) => (
-        <div key={plan.id}>Week 4:{` ${plan.week_four} IBS`}</div>
-                
-
-      ))}
-</div>
-    {data.map((plan) => (
-        <div key={plan.id}>Week 5:{` ${plan.week_five} IBS`}</div>
-                
-  ))}
-  
-    {data.map((plan) => (
-        <div key={plan.id}> Week 6: {`${plan.week_six} IBS`}</div>
- ))}
-</div>
-    
-
-  )
+    );
 }

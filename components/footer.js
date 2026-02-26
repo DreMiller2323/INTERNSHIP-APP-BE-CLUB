@@ -1,8 +1,16 @@
+import Image from "next/image";
+
 export  function Footer() {
     return (
         <div className='footer'>
-<h1>Bottom</h1>
-<h1></h1>
-        </div>
+
+     <Image
+      src="/DreFit.jpg"
+      width={25}
+      height={25}
+      alt="Picture of the author"
+    />
+    </div>
+
     );
 }

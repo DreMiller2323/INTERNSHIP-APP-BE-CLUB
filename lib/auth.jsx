@@ -42,9 +42,10 @@ const { email, password } = credentials;
     }),
   ],
   pages:{
-    signIn:'/login',
+    signIn:'/dashboard',
     error:'/login?error=1',
-    signOut:'/dashboard',
+    signOut:'/',
+
   },
 
   

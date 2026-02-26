@@ -1,4 +1,6 @@
 'use client'
+import { redirect } from 'next/navigation'
+
 // import { useRouter } from "next/navigation"
 export default  function Signup() {
   //  const router = useRouter()
@@ -14,23 +16,28 @@ const handleSubmit = async (e) => {
       console.log(`${key}: ${value}`);
     }
 try{
-   const res = await fetch("/api/signup/", {
+  'use server'
+   const res = await fetch("/api/signup", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
-    name: name,
-    email: email,
-    password: password,
+    name,
+    email,
+    password
   }),
 });
 
       if (!res.ok) {
+       
+
         console.log("API call failed", res.status);
+       
+       
         return;
       }
 
-      const data = await res.json();
-      console.log("Protected API response:", data);
+     redirect('/login')
+
     }catch(error){
       console.log(error)
     }
@@ -45,7 +52,7 @@ try{
          <label htmlFor = "name">Name:</label>
       <input
         type="name"
-        placeholder="Email"
+        placeholder="Name"
         name= "name"
     /><br/>
         <label htmlFor = "email">Email:</label>

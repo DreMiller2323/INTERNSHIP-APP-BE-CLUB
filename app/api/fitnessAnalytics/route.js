@@ -11,8 +11,8 @@ if(!session){
  Response(JSON.stringify({error: 'Not Authorized'},{status:401}))
 }
 //finding user data from the sql database we will send to the front end code---
-const sql = ' SELECT * FROM client_details WHERE user_id=?'
-const [rows] = await db.execute(sql, [userId]);
+const sql = ' SELECT  fitness_level, exercise_name FROM client_details WHERE user_id=?'
+const [rows] = await db.execute(sql, [userId, finess_level, exercise_name]);
 console.log(rows)
     return Response.json(rows)
     
