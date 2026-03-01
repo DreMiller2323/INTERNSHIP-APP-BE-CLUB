@@ -3,13 +3,21 @@
 import Plan from '../fitness/page'
 import {auth} from '../../../lib/auth';
 import {Suspense} from 'react'
+import Analytics from '../fitnessInfo/page'
 
   const session =  await auth()
  if (!session) return <div>Not authenticated</div>
 export default  function Page() {
     return (
+    <main>
+   
         <div>
         <Plan/>
- </div>
+        </div>
+        <div>
+        <Analytics/>
+        </div>
+</main>
+ 
     );
 }

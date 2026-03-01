@@ -1,10 +1,11 @@
  //and expose our data out here.
+ 'use client'
 import useSWR from 'swr'
 
 
 const fetcher = (url) => fetch(url).then((r) => r.json())
 
-export default   function Plan() {
+export default   function Analytics() {
 
   const { data, error, isLoading } = useSWR(
     '/api/fitnessAnalytics',
@@ -19,19 +20,14 @@ export default   function Plan() {
 
   <div className='plan'>
   <h1>Page is working </h1>
-{/* {data.map((plan) => (
+{data.map((plan) => (
   
-  <div key={plan.id}>Week1: {` ${plan.week_one} IBS`}</div>
+  <div key={plan.id}>Bodyweight{` ${plan.body_weight}' IBS`}</div>
 ))}
 <div>
     {data.map((plan) => (
-        <div key={plan.id}>Week 2: {` ${plan.week_two} IBS`}</div> ))}
+        <div key={plan.id}>{`Your estimated/raw one rep max on ${plan.exercise_name} is  ${plan.one_rep_max} `}</div> ))}
 </div>
-<div>
-    {data.map((plan) => (
-        <div key={plan.id}> Week 3: {` ${plan.week_three} IBS`}</div>
- ))}
-</div> */}
 </div>
     );
 }

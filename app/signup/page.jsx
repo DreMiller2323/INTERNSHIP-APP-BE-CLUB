@@ -1,5 +1,6 @@
 'use client'
 import { redirect } from 'next/navigation'
+import Image from "next/image";
 
 // import { useRouter } from "next/navigation"
 export default  function Signup() {
@@ -46,6 +47,20 @@ try{
       
   return (
     <main>
+      <div>
+      <Image
+      src="/7.png"
+      width={150}
+      height={100}
+      alt="Picture of the author"
+    />
+</div>
+      <div>
+        <article className ="signup">
+        <h1>Sign up to join Be-Club site</h1>
+        <h1>Get early access to apps - Join the entrepreneurship team - And much more. </h1>
+        </article>
+      </div>
     <form onSubmit ={handleSubmit}>
         
       <div className = "formDiv">

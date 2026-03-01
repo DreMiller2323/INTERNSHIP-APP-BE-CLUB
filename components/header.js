@@ -1,7 +1,28 @@
+
+import Image from "next/image";
+
 export  function Header() {
     return (
+        <div className="header-container">
+  
         <div>
-            <h1>Top</h1>
+        <p>
+INNOVATION.
+
+SKILL.
+
+LEADERSHIP.
+
+ASSERTIVENESS.
+
+KNOWLEDGE.
+
+STRATEGY.
+
+GOAL.
+</p>
         </div>
+        </div>
+        
     );
 }

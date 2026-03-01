@@ -3,10 +3,19 @@ import './globals.css'
 import {Footer} from '../components/footer'
 import {Header} from '../components/header'
 
+import { Roboto } from 'next/font/google'
+ 
+// If loading a variable font, you don't need to specify the font weight
+const roboto = Roboto({
+    weight: ['400', '700'], // normal + bold
 
+  subsets: ['latin'],
+  display: 'swap',
+})
+ 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html>
+    <html  className={roboto.className}>
       <body>
         <main>
         <nav className='topnav'>

@@ -1,54 +1,78 @@
 import Image from "next/image";
 export default function Home() {
   return (
-<div className="grid">
-   <div className="col-1-3  image-container">
-    
-   </div>
-    <div className = 'col-2-3  image-container'>
+ 
+      
+<div className="image-container">
+<div>
    <Image
       src="/BeClub.png"
-      width={500}
-      height={100}
+      width={300}
+      height={300}
       alt="Picture of the author"
     />
-     <div className='frontend-content'>Learn Entrepreneurship!</div>
+    </div>
+   <p className='about-beclub'>
+  Be-Club, founded at Berea College in Kentucky,
+       is a thriving community of students passionate about entrepreneurship who through talks,
+      workshops, and conferences, challenge the idea that entrepreneurship isn't just about businesses but a mentality that anyone can acquire!
+    
+     </p>
+     <div>
 
-</div>
-
-    <div className = 'col-1-3  image-container'>
-    <Image
-      src="/learn.jpg"
+     </div>
+    <div>
+      
+ <Image
+      src="/grow.JPG"
       width={500}
-      height={100}
-      alt="An organization dedidacted to helping young entrepreneaurs"
+      height={50}
+      alt=""
     />
-    <div className="bottom-left">Education!</div>
-</div>
-
-  
-
-<div className="col-2-3 image-container">
-
-  <Image
-    src="/Collab.jpg"
+ <Image
+    className='learn'
+    src="/learn.jpg"
     width={500}
-    height={100}
+    height={200}
     alt="An organization dedicated to helping young entrepreneurs"
   />
-  <div className="bottom-left">Build Connections</div>
 </div>
 
-    <div className = "col-1-3 image-container">
-  <div>Win!</div>
+<div>
+    <Image
+      src="/collab.JPG"
+      width={500}
+      height={300}
+      alt=""
+    />
+  
 
     <Image
-      src="/IMG_6799.jpg"
+      src="/IMG_2382.JPG"
+      width={500}
+      height={300}
+      alt=""
+    />
+    </div>
+    {/* <div>
+<h1>Student Driven!</h1>
+</div> */}
+<div>
+    <Image
+      src="/IMG_6799.JPG"
       width={500}
       height={500}
-      alt="An organization dedidacted to helping young entrepreneaurs"
+      alt=""
     />
-  <div className="bottom-left">Win together!</div>
+
+    <Image
+      src="/IMG_6360.jpg"
+      width={500}
+      height={500}
+      alt=""
+    />
+    </div>
+    <div>
 </div>
 </div>
 

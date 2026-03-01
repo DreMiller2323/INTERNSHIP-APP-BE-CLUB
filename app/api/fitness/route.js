@@ -17,7 +17,7 @@ console.log(rows)
     return Response.json(rows)
     
   } catch (error) {
-    console.error('Error creating user:', error);
+    console.error('Error receiving data:', error);
     return new Response(JSON.stringify({ error: 'Internal Server Error' }), { status: 500 });
   }
 }
