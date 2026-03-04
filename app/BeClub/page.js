@@ -3,12 +3,12 @@ import useSWR from 'swr';
 
 export default function Page() {
     return (
-        <div className = 'BeClub'>
-    <Image
-      src="/4.png"
-      width={500}
-      height={100}
-      alt=""
-    /></div>
+  <div>
+    <h1>Contact Us</h1>
+    <ul>
+      <li>Phone Number:(520)555-5555</li>
+      <li>Email: Test @ test.com</li>
+    </ul>
+  </div>
     );
 }

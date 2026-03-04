@@ -3,19 +3,33 @@
 import Plan from '../fitness/page'
 import {auth} from '../../../lib/auth';
 import {Suspense} from 'react'
+import Image from "next/image";
+
 import Analytics from '../fitnessInfo/page'
 
   const session =  await auth()
  if (!session) return <div>Not authenticated</div>
 export default  function Page() {
     return (
-    <main>
+    <main className='plan'>
    
         <div>
         <Plan/>
         </div>
         <div>
         <Analytics/>
+        </div>
+        <div>
+             <Image
+      src="/DreFit.JPG"
+      width={500}
+      height={100}
+      alt=""
+    />
+    <div>
+    App Created by Coach Dre Miller
+    Personal Trainer and Software Engineer. 
+    </div>
         </div>
 </main>
  

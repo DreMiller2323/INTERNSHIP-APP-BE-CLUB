@@ -19,7 +19,7 @@ export default   function Analytics() {
   return (
 
   <div className='plan'>
-  <h1>Page is working </h1>
+<div>
 {data.map((plan) => (
   
   <div key={plan.id}>Bodyweight{` ${plan.body_weight}' IBS`}</div>
@@ -27,6 +27,11 @@ export default   function Analytics() {
 <div>
     {data.map((plan) => (
         <div key={plan.id}>{`Your estimated/raw one rep max on ${plan.exercise_name} is  ${plan.one_rep_max} `}</div> ))}
+</div>
+<div>
+    {data.map((plan) => (
+        <div key={plan.id}>{`Your strength to bodyweight ratio is:${plan.body_ratio} `}</div> ))}
+</div>
 </div>
 </div>
     );

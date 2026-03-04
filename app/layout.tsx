@@ -23,8 +23,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <Link href="/">Home</Link>
            <Link href="/signup">Signup</Link>
           <Link href="/login">Login</Link>
-
-          <Link href="/BeClub">Be-Club</Link>
+          <Link href="/BeClub">Contact Us!</Link>
      </nav>
    </main>
    <Header/>

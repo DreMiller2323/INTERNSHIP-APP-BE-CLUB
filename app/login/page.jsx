@@ -28,9 +28,11 @@ try{
   }
 
   return (
-    <div>
-           <div>
+    //  <main  className="sign-login-container "
+    <div className ="login-container " >
+           <div className='awesome-two'>
       <Image
+   
       src="/7.png"
       width={150}
       height={100}
@@ -46,7 +48,7 @@ try{
       <input placeholder="Email" name="email" type="email" required /><br/>
       <label htmlFor="password">Password:</label>
       <input placeholder= 'Password'name="password" type="password" required /><br/>
-      <button className= "button"type="submit">Sign in</button><br/>
+      <button className= "login-button"type="submit">Sign in</button><br/>
     </form>
     </div>
   );

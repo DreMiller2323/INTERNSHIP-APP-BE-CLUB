@@ -13,7 +13,7 @@ if(!session){
 
 //finding user data from the sql database we will send to the front end code---
 
-const sql = ' SELECT fitness_level, exercise_name, one_rep_max , body_weight FROM client_details WHERE user_id=?'
+const sql = ' SELECT fitness_level, exercise_name, one_rep_max , body_weight, body_ratio FROM client_details WHERE user_id=?'
 const [rows] = await db.execute(sql, [userId]);
 console.log(rows)
 
